@@ -1,0 +1,47 @@
+# .gitignore (root)
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# IDE generated files
+.idea
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+**/.vscode/
+
+# IntelliJ IDEA
+**/.idea/
+**/*.iml
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+
+# Build outputs
+**/target/
+**/out/
+**/bin/
+
+# Allow resources and config
+!**/*.yml
+!**/*.yaml
+!**/*.properties
+!**/*.json
+!**/*.xml
+
+# Allow documentation
+!**/*.md
+
+# Allow java files
+!**/*.java
+**/*.java~
+**/*.kotlin
+
+# Allow essential project files
+!.gitignore
+!README.md
