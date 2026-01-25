@@ -1,7 +1,5 @@
 package tree.medium;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
 
 /**
  * Given the root of a binary tree, flatten the tree into a "linked list":

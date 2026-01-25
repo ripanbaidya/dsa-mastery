@@ -1,7 +1,7 @@
 package tree.easy;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,10 +43,7 @@ public class BinaryTreePaths {
     }
 
     public static void main(String[] args) {
-        BinaryTreePaths obj = new BinaryTreePaths();
 
-        List<String> paths = obj.binaryTreePaths(BinaryTreeMain.buildTree());
-        System.out.println(paths);
     }
 }
 

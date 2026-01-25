@@ -1,7 +1,7 @@
 package tree.hard;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 import java.util.*;
 
@@ -79,12 +79,5 @@ public class VerticalTraversal {
     }
 
     public static void main(String[] args) {
-        VerticalTraversal obj = new VerticalTraversal();
-
-        List<List<Integer>> result = obj.verticalTraversal(BinaryTreeMain.buildTree());
-
-        for(List<Integer> list : result) {
-            System.out.println(list);
-        }
     }
 }

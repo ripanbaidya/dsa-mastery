@@ -1,7 +1,7 @@
 package tree.medium;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.Node;
+
+import util.tree.Node;
 
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class BottomViewOfBinaryTree {
     }
 
     public ArrayList<Integer> bottomView(Node root) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
         if(root == null) return result;
 
         TreeMap<Integer, Integer> mp = new TreeMap<>(); // {col, topValue}
@@ -56,9 +56,5 @@ public class BottomViewOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        BottomViewOfBinaryTree obj = new BottomViewOfBinaryTree();
-
-        List<Integer> bottomView = obj.bottomView(BinaryTreeMain.buildBinaryTree());
-        System.out.println("Bottom view of the binary tree: " + bottomView);
     }
 }

@@ -1,6 +1,5 @@
 package tree.medium;
 
-import tree.representation.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

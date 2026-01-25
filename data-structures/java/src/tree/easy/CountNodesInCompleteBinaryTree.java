@@ -1,6 +1,7 @@
 package tree.easy;
 
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 /**
  * Given the root of a complete binary tree, return the number of the nodes in the tree.

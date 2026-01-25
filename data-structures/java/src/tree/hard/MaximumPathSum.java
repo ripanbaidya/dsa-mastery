@@ -1,7 +1,7 @@
 package tree.hard;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 /**
  * A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an
@@ -38,9 +38,5 @@ public class MaximumPathSum {
     }
 
     public static void main(String[] args) {
-        MaximumPathSum obj = new MaximumPathSum();
-
-        int maximumPathSum = obj.maxPathSum(BinaryTreeMain.buildTree());
-        System.out.println("Maximum Path Sum: " + maximumPathSum);
     }
 }

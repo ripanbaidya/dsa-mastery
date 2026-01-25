@@ -1,7 +1,7 @@
 package tree.easy;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 /**
  * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
@@ -23,9 +23,5 @@ public class SameTree {
     }
 
     public static void main(String[] args) {
-        SameTree obj = new SameTree();
-
-        boolean isSame = obj.isSameTree(BinaryTreeMain.buildTree(), BinaryTreeMain.buildTree());
-        System.out.println("Are the two trees same? " + isSame);
     }
 }

@@ -1,7 +1,7 @@
 package tree.easy;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 /**
  * Given the root of a binary tree, return the length of the diameter of the tree.
@@ -33,9 +33,5 @@ public class DiameterOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        DiameterOfBinaryTree obj = new DiameterOfBinaryTree();
-
-        int diameter = obj.diameterOfBinaryTree(BinaryTreeMain.buildTree());
-        System.out.println("Diameter of the binary tree is: " + diameter);
     }
 }

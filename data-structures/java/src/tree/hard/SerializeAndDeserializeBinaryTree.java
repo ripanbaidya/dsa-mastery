@@ -1,6 +1,6 @@
 package tree.hard;
 
-import tree.representation.TreeNode;
+import util.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -48,11 +48,13 @@ public class SerializeAndDeserializeBinaryTree {
             TreeNode parent = q.poll();
             if(!values[i].equals("n")) {
                 TreeNode left = new TreeNode(Integer.parseInt(values[i]));
+                assert parent != null;
                 parent.left = left;
                 q.add(left);
             }
             if(!values[++i].equals("n")) {
                 TreeNode right = new TreeNode(Integer.parseInt(values[i]));
+                assert parent != null;
                 parent.right = right;
                 q.add(right);
             }

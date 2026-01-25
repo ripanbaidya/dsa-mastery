@@ -1,9 +1,6 @@
 package linkedlist.medium;
 
-import linkedlist.representation.singly.ListNode;
-
-import java.util.ArrayList;
-import java.util.List;
+import util.linkedlist.ListNode;
 
 /**
  * @author Ripan Baidya

@@ -1,7 +1,6 @@
 package tree.easy;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+import util.tree.TreeNode;
 
 /**
  * Given the root of a binary tree, return its maximum depth.
@@ -24,9 +23,5 @@ public class MaximumDepthOfBinaryTree {
     }
 
     public static void main(String[] args) {
-        MaximumDepthOfBinaryTree obj = new MaximumDepthOfBinaryTree();
-
-        int maximumDepth = obj.maxDepth(BinaryTreeMain.buildTree());
-        System.out.println("Maximum Depth of Binary Tree: " + maximumDepth);
     }
 }

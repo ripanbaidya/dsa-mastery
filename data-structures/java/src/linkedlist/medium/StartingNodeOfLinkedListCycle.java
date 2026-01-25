@@ -1,9 +1,6 @@
 package linkedlist.medium;
 
-import linkedlist.representation.singly.ListNode;
-
-import java.util.HashSet;
-import java.util.Set;
+import util.linkedlist.ListNode;
 
 /**
  * @author Ripan Baidya

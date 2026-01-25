@@ -1,7 +1,5 @@
 package bst.hard;
 
-import bst.representation.Node;
-
 /**
  * You're given a binary tree. Your task is to find the size of the largest subtree within this
  * binary tree that also satisfies the properties of a Binary Search Tree (BST). The size of a

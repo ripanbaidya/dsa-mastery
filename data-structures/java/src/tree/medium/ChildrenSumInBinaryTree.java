@@ -1,6 +1,7 @@
 package tree.medium;
 
-import tree.representation.Node;
+
+import util.tree.Node;
 
 /**
  * Given a binary tree having n nodes. Check whether all of its nodes have a value equal to the sum

@@ -1,6 +1,5 @@
 package bst.easy;
 
-import bst.representation.BinarySearchTreeMain;
 import bst.representation.TreeNode;
 
 /**

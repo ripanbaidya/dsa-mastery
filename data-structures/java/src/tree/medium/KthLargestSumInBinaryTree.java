@@ -1,7 +1,7 @@
 package tree.medium;
 
-import tree.repr.BinaryTreeBuilder;
-import tree.repr.TreeNode;
+import util.tree.BinaryTreeBuilder;
+import util.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.PriorityQueue;

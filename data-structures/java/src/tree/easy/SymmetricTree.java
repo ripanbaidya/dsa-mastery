@@ -1,7 +1,7 @@
 package tree.easy;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 /**
  * Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
@@ -28,9 +28,5 @@ public class SymmetricTree {
     }
 
     public static void main(String[] args) {
-        SymmetricTree obj = new SymmetricTree();
-
-        boolean isSymmetric = obj.isSymmetric(BinaryTreeMain.buildTree());
-        System.out.println("Is the tree symmetric? " + isSymmetric);
     }
 }

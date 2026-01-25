@@ -16,7 +16,7 @@ package linkedlist.easy;
  * Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
  */
 
-import linkedlist.representation.singly.ListNode;
+import util.linkedlist.ListNode;
 
 /**
  * // Brute force solution

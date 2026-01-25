@@ -1,6 +1,7 @@
 package tree.medium;
 
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 import java.util.HashMap;
 
@@ -15,7 +16,6 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         if (inorder.length != preorder.length)
             return null;
-
         // Map to store the index of each value in inorder array
         HashMap<Integer, Integer> inorderIndexMap = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {

@@ -1,6 +1,6 @@
 package tree.hard;
 
-import tree.representation.Node;
+import util.tree.Node;
 
 import java.util.HashMap;
 import java.util.LinkedList;

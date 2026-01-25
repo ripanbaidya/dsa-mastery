@@ -1,6 +1,7 @@
 package tree.medium;
 
-import tree.representation.TreeNode;
+
+import util.tree.TreeNode;
 
 import java.util.*;
 

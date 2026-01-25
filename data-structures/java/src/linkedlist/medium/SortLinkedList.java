@@ -1,6 +1,6 @@
 package linkedlist.medium;
 
-import linkedlist.representation.singly.ListNode;
+import util.linkedlist.ListNode;
 
 /**
  * @author Ripan Baidya

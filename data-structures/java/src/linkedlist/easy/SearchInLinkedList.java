@@ -1,6 +1,6 @@
 package linkedlist.easy;
 
-import linkedlist.representation.singly.Node;
+import util.linkedlist.Node;
 
 /**
  * @author Ripan Baidya

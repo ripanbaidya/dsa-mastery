@@ -1,7 +1,7 @@
 package tree.medium;
 
-import tree.representation.BinaryTreeMain;
-import tree.representation.Node;
+
+import util.tree.Node;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,9 +81,5 @@ public class BoundaryTraversal {
     }
 
     public static void main(String[] args) {
-        BoundaryTraversal obj = new BoundaryTraversal();
-
-        List<Integer> result = obj.boundaryTraversal(BinaryTreeMain.buildBinaryTree());
-        System.out.println("Boundary Traversal: " + result);
     }
 }

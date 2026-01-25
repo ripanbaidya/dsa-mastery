@@ -11,7 +11,6 @@ package tree.medium;
  * Explanation: The LCA of nodes 5 and 1 is 3.
  */
 
-import tree.representation.TreeNode;
 
 /**
  * // Brute force Approach
