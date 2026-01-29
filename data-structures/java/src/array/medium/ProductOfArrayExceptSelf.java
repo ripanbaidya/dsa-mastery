@@ -4,36 +4,61 @@ import java.util.Arrays;
 
 /*
  * @author Ripan Baidya
- * @date 18/09/25
+ * @date 29/01/26
  *
- * Given an integer array nums, return an array answer such that answer[i] is equal to the product
- * of all the elements of nums except nums[i].
+ * Given an integer array nums, return an array answer such that answer[i] is equal to
+ * the product of all the elements of nums except nums[i].
  * The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  * You must write an algorithm that runs in O(n) time and without using the division operation.
  *
  * Example:
- *
  * Input: nums = [1,2,3,4]
  * Output: [24,12,8,6]
- * Example 2:
  */
 public class ProductOfArrayExceptSelf {
 
-    /* Better Solution */
+    /* ---------------- Brute Force  ---------------- */
 
-    /**
-     * Use two auxiliary arrays (`prefix` and `suffix`) to store the cumulative product
-     * of elements before and after each index.
+    /*
+     * The brute force approach is to calculate the product of all elements in the array
+     * except the one at the current index. We can achieve this by iterating over each
+     * element and using an inner loop to calculate the product of all elements except the
+     * current one.
+     *
+     * Time Complexity: O(n^2) because for each element
+     * Space Complexity: O(1) except for the output array
+     */
+    public int[] productExceptSelfBruteForce(int[] nums) {
+        int n = nums.length;
+        int[] output = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            // Initialize each element as 1 for multiplication
+            output[i] = 1;
+            for (int j = 0; j < n; j++) {
+                if (i != j) {
+                    output[i] *= nums[j];
+                }
+            }
+        }
+
+        return output;
+    }
+
+    /* ---------------- Better: Prefix & Suffix Array ---------------- */
+
+    /*
+     * Use two auxiliary arrays (`prefix` and `suffix`) to store the cumulative
+     * product of elements before and after each index.
      * For each position `i`, the result is simply: res[i] = prefix[i] * suffix[i]
-     * <p>
+     *
      * Time Complexity: O(n)  (two passes for prefix/suffix + one pass for result)
      * Space Complexity: O(n) (extra space for prefix and suffix arrays)
      */
-    public int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelfBetter(int[] nums) {
         int n = nums.length;
 
         // Arrays to store product of all elements before (prefix) and after (suffix)
-        // each index
         int[] prefix = new int[n];
         int[] suffix = new int[n];
 
@@ -60,8 +85,18 @@ public class ProductOfArrayExceptSelf {
         return result;
     }
 
-    /* Optimal Solution */
+    /* ---------------- Optimal: Single Pass ---------------- */
 
+    /*
+     * To optimize our space usage, we can eliminate the suffix array and calculate
+     * the right product on the fly while filling up the result array. Compute left
+     * products into the output first, then sweep from right to left while maintaining
+     * a single variable right that accumulates the product of elements to the right
+     * of the current index.
+     *
+     * Time Complexity: O(n) because it involves two passes over the array.
+     * Space Complexity: O(1) extra space apart from the output array.
+     */
     public int[] productExceptSelfOptimal(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
@@ -85,15 +120,13 @@ public class ProductOfArrayExceptSelf {
         return result;
     }
 
-
+    // Main
     public static void main(String[] args) {
-        var obj = new ProductOfArrayExceptSelf();
+        var solution = new ProductOfArrayExceptSelf();
 
         int[] nums = {1, 2, 3, 4};
-        int[] res = obj.productExceptSelf(nums);
-        int[] resOptimal = obj.productExceptSelfOptimal(nums);
 
-        System.out.println(Arrays.toString(res)); //
-        System.out.println(Arrays.toString(resOptimal));
+        int[] result = solution.productExceptSelfOptimal(nums);
+        System.out.println(Arrays.toString(result));
     }
 }
