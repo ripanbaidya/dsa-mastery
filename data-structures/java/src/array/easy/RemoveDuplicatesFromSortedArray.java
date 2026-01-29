@@ -1,6 +1,6 @@
 package array.easy;
 
-/**
+/*
  * @author Ripan Baidya
  * @date 30-07-2025
  *
@@ -34,42 +34,44 @@ package array.easy;
  * 2 respectively. It does not matter what you leave beyond the returned k (hence they are underscores).
  */
 public class RemoveDuplicatesFromSortedArray {
-    /**
-     * optimal solution:
-     * we know first element is always unique, we use that property here, we skip where current element
-     * is same as last unique element, else we place the new unique element at front of last unique element
-     * and update the last unique element
+
+    /* ---------------- Optimal: Two Pointer ---------------- */
+
+    /*
+     * This method uses two pointers approach to remove the duplicates from the sorted
+     * array.
+     * - The first pointer 'writePos' keeps track of the next position where a unique
+     * element should be stored.
+     * - The second pointer 'prev' keeps track of the last unique element. If the current
+     * element is not equal to 'prev', it indicates that a new unique element is found.
+     * The unique element is stored at the 'writePos' position and 'writePos' is incremented.
+     * Finally, the 'writePos' is returned as the number of unique elements in the array.
+     *
+     * Time Complexity: O(n), where n is the number of elements in the array.
+     * Space Complexity: O(1)
      */
     public int removeDuplicates(int[] nums) {
-        int n = nums.length; // array length
+        int writePos = 1;
+        int prev = nums[0]; // Last unique element
 
-        // if array has only one element, return 1
-        if (n == 1) return 1;
-
-        int k = 1; // index of last unique element
-        int last = nums[0]; // last unique element
-
-        for (int i = 1; i < n; i ++){
-            // when current element is same as last unique element, skip it
-            if (last == nums[i]){
-                continue;
-            } else {
-                // place the new unique element at front of last unique element
-                // update the last unique element
-                nums[++ k] = nums[i];
-                last = nums[i];
+        for (int i = 1; i < nums.length; i++) {
+            // Found a new unique element
+            if (prev != nums[i]) {
+                nums[writePos++] = nums[i];
+                prev = nums[i];
             }
         }
 
-        return k;
+        return writePos;
     }
 
+    // Main
     public static void main(String[] args) {
-        RemoveDuplicatesFromSortedArray obj = new RemoveDuplicatesFromSortedArray();
+        var solution = new RemoveDuplicatesFromSortedArray();
 
-        int[] nums = {1,1,2};
-        int k = obj.removeDuplicates(nums);
+        int[] nums = {1, 1, 2};
 
-        System.out.println("Number of unique elements: "+ k);
+        int k = solution.removeDuplicates(nums);
+        System.out.println("Number of unique elements: " + k);
     }
 }
